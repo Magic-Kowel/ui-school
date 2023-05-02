@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
+import CardUser from './components/CardUser';
+import Breadcrumb from './components/Breadcrumb';
+import SearchFilter from './components/SearchFilter';
+import NavBarApp from './components/NavBarApp';
+import Box from '@mui/material/Box';
+import {
+  Container,Grid
+} from '@mui/material';
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <NavBarApp />
+    <Container  maxWidth="xl" sx={{
+      marginTop:10,
+      paddingBottom:5,
+      backgroundColor: '#D0E4FF'
+    }}>
+        <Breadcrumb />
+        <SearchFilter />
+        <Grid container spacing={3}  justify="center">
+            <Grid
+              item xs={12} sm={6} md={4}>
+              <CardUser />
+            </Grid>
+            <Grid
+              item xs={12} sm={6} md={4}>
+              <CardUser />
+            </Grid>
+            <Grid
+              item xs={12} sm={6} md={4}>
+              <CardUser />
+            </Grid>
+            <Grid
+              item xs={12} sm={6} md={4}>
+              <CardUser />
+            </Grid>
+            <Grid
+              item xs={12} sm={6} md={4}>
+              <CardUser />
+            </Grid>
+        </Grid>
+    </Container>
+  </>
   );
 }
 
